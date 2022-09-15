@@ -14,4 +14,8 @@ class PokemonController(val pokemonWebService: PokemonWebService): Logging {
     @GetMapping("/pokemon/{name}")
     fun getPokemonByName(@PathVariable name: String): Mono<Pokemon> = pokemonWebService.getPokemonByName(name)
 
+
+    @GetMapping("/pokemon/cache/{name}")
+    fun getPokemonByNameWithCache(@PathVariable name: String): Mono<Pokemon> = pokemonWebService.getPokemonByNameWithCache(name)
+
 }

@@ -7,3 +7,8 @@ logging:
     org:
       springframework:
         cache: TRACE
+
+    reactor:
+      netty:
+        http:
+          client: TRACE
